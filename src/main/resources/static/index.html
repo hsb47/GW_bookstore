@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHaven - Online Bookstore</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-book-open"></i>
+            <span>BookHaven</span>
+        </div>
+        <div class="nav-links">
+            <a href="/" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="/cart.html"><i class="fas fa-shopping-cart"></i> Cart <span id="cart-count" class="badge">0</span></a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Discover Your Next Great Read</h1>
+            <p>Browse our curated collection of timeless classics and modern masterpieces.</p>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="Search by title or author...">
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="books-section">
+            <div class="section-header">
+                <h2>All Books</h2>
+                <div class="filter-tags">
+                    <button class="tag active" data-category="all">All</button>
+                    <button class="tag" data-category="Classic">Classic</button>
+                    <button class="tag" data-category="Fantasy">Fantasy</button>
+                    <button class="tag" data-category="Dystopian">Dystopian</button>
+                    <button class="tag" data-category="Romance">Romance</button>
+                    <button class="tag" data-category="Non-Fiction">Non-Fiction</button>
+                </div>
+            </div>
+            <div id="books-grid" class="books-grid">
+                <div class="loading"><i class="fas fa-spinner fa-spin"></i> Loading books...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 BookHaven. Built with Spring Boot & Java.</p>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
